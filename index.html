@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Insert password</h1>
+  <input id="password" type="text" placeholder="Password">
+  <button id="submit">Valider</button>
+  <script>
+    const submitBtn = document.querySelector('#submit')
+    const passwordInput = document.querySelector('#password')
+
+    submitBtn.addEventListener('click', () => {
+      const passwordInputValue = passwordInput.value
+      if (passwordInputValue === "8822") {
+        const div = document.createElement('div')
+        div.id = "success"
+        div.textContent = "Vous etes connecté"
+        document.body.appendChild(div)
+      }
+    })
+
+
+  </script>
+</body>
+</html>
